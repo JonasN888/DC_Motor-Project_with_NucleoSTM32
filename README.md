@@ -19,7 +19,7 @@ CONSOLE UART:
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
 Pour cela, il faut paramétrer la liaison UART de la carte STM32-G431RB. Lors de l'envoie de donnée par l'interface UART, nous ne voyons pas ce que nous envoyons. C'est pourquoi il faut réaliser une fonction qui renvoie à l'utilisateur des caractéres un par un. 
 Le principe est le suivant. On autorise les interruptions venant du UART. Une entrée à la console va faire appel à la fonction HAL_UART_RxCpltCallback() où on met un flag à 1. Puis on met le caractère recu dans une variable de type char et on réautorise les interruptions. 
-Pour pouvoir utiliser les commmandes directement dans le shell, on stocke chaque caractére recu dans un tableau de type char en incrément un compteur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help pinout...) on utilise la fonction strncmp(). 
+Pour pouvoir utiliser les commmandes directement dans le shell, on stocke chaque caractére recu dans un tableau de type char en incrément un compteur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help pinout...) on utilise la fonction strncmp(). Toutes ces opérations peuvent se faire dans une fonction nommée "fonction gestion_shell()".
 
 
 COMMANDE DE 4 TRANSISTOR DU HACHEUR:
@@ -36,3 +36,5 @@ Le câblage de la carte STM32 au hacheur se fait en utilisant la documentation "
 
 
 ![IMG_20211109_092212](https://user-images.githubusercontent.com/95878275/145674236-b6eb5d1b-f74c-4702-8326-4da7fae88389.jpg)
+
+Afin de démarrer correctement le hacheur, il faut envoyer un signal carrée pendant au minimum 2us. On peut créér ce signal carrée dans une fonction start() qu'on appelle dans le fonction gestion_shell().
