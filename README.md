@@ -14,6 +14,13 @@ Il y a 4 étapes:
 4. Réaliser l'asservissement en temps réel
 
 
+
+
+
+
+
+
+
 CONSOLE UART:
 
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
@@ -22,8 +29,12 @@ Le principe est le suivant. On autorise les interruptions venant du UART. Une en
 Pour pouvoir utiliser les commmandes directement dans le shell, on stocke chaque caractére recu dans un tableau "cmd" de type char en incrément un compteur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help pinout...) on utilise la fonction strncmp(). Toutes ces opérations peuvent se faire dans une fonction nommée "fonction gestion_shell()". L'appui sur la touche Entrée peut être détectée en utilisant le tableau d'asci ce qui correspond au caractère 0x0D en hexadécimal. 
 
 
-COMMANDE DE 4 TRANSISTOR DU HACHEUR:
 
+
+
+
+
+COMMANDE DE 4 TRANSISTOR DU HACHEUR:
 
 On génère 4 PWM en commande décalé. Pour cela, on utilise le Timer 1 sur les chaînes 1 et 2 en mode "PWM Generation CH1 CH1N". Afin d'avoir une fréquence de 16kHz pour faire tourner proprement la MCC, on prend PSC = 5-1 et ARR = 1024-1. Le mode de comptage est le "center aligend mode". On visualize les 4 signaux sur l'oscilloscope afin de vérifer le bon fonctionnement ainsi que la fréquence de nos signaux:
 
@@ -43,3 +54,12 @@ Afin de démarrer correctement le hacheur, il faut envoyer un signal carrée pen
 On peut changer directement le rapport cyclique en utilisant des structures de type TIM1->CCR1. On constate que le moteur ne démarre pas encore pour alpha = 0,55 à case de frottements secs. À partir de alpha = 0.6, le moteur commence à tourner lentement. Il est conseilé de ne pas augmenter la vitesse trop rapidement, sinon le moteur demande un courant qui dépasse la valeur maximale autorisée par le hacheur. Un rapport cyclique inférieur à 0.45 fait tourner le moteur dans l'autre sens.
 
 Il est pratique de régler la vitesse du moteur directement dans une fonction. On appelle cette fonction lorsque notre chaîne de caractère entrée á la console correspond bien à "speed". Dans notre cas, un rapport caclique de 1 correspond á la valeur maximale du moteur. On récupère la vitesse via notre tableu "cmd" après avoir fait une conversin en entier. On élimine les cas où le rapport cyclique prend une valeur non autorisée.
+
+
+
+
+
+
+
+AQUISITION DES CAPTEURS:
+
