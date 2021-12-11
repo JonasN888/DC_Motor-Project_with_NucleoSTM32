@@ -29,6 +29,7 @@ On génère 4 PWM en commande décalé. Pour cela, on utilise le Timer 1 sur les
 
 ![IMG_9188](https://user-images.githubusercontent.com/95878275/145674111-7a581ea2-4b7c-4aa9-9c5c-54700eaf9e32.PNG)
 
+Le temps mort doit être supérieur à 2us. On peut réaliser ce temps mort en réglant le registre "DeadTime" à 203.
 
 Le câblage de la carte STM32 au hacheur se fait en utilisant la documentation "PowerModule_70097A.pdf".
 
