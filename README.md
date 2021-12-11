@@ -55,4 +55,5 @@ Il est pratique de régler la vitesse du moteur directement dans une fonction. O
 AQUISITION DES CAPTEURS:
 
 
+La prochaine étape est de faire l'acquisition des données venant du capteur Hall pour mesurer le courant. On active le ADC ainsi que le DMA dans le fichier.ioc en autorisant les interruptions venant du DMA1. En peut ensuite tester le capteur en affichant les données à la console. La documentation PowerModule_70097A.pdf nous dit que la conversion se fait de la manière suivante: 12,5A/V avec 2,5V = 0A. Cela  correspond à l'équation suivante qu'on utilise pour calculer le courant en ampères: I = 12,5 * U - 30.
 
