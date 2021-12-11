@@ -13,6 +13,7 @@ Il y a 4 étapes:
 3. Faire l'acquisition des différents capteurs
 4. Réaliser l'asservissement en temps réel
 
+
 1. CONSOLE UART:
 
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
