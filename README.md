@@ -14,7 +14,7 @@ Il y a 4 étapes:
 4. Réaliser l'asservissement en temps réel
 
 
-1. CONSOLE UART:
+CONSOLE UART:
 
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
 Pour cela, il faut paramétrer la liaison UART de la carte STM32-G431RB. Lors de l'envoie de donnée par l'interface UART, nous ne voyons pas ce que nous envoyons. C'est pourquoi il faut réaliser une fonction qui renvoie à l'utilisateur des caractéres un par un. 
