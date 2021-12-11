@@ -39,3 +39,5 @@ Le câblage de la carte STM32 au hacheur se fait en utilisant la documentation "
 ![IMG_20211109_092212](https://user-images.githubusercontent.com/95878275/145674236-b6eb5d1b-f74c-4702-8326-4da7fae88389.jpg)
 
 Afin de démarrer correctement le hacheur, il faut envoyer un signal carrée pendant au minimum 2us. On peut créér ce signal carrée dans une fonction start() qu'on appelle dans le fonction gestion_shell() si le message envoyé correspond bien à la chaîne de caractère "start".
+
+On peut changer directement le rapport cyclique en utilisant des structures de type TIM1->CCR1. On constate que le moteur ne démarre pas encore pour alpha = 0,55 à case de frottements secs. À partir de alpha = 0.6, le moteur commence à tourner lentement. Il est conseilé de ne pas augmenter la vitesse trop rapidement, sinon le moteur demande un courant qui dépasse la valeur maximale autorisée par le hacheur. Un rapport cyclique inférieur à 0.45 fait tourner le moteur dans l'autre sens.
