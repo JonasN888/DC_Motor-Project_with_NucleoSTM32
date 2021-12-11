@@ -21,3 +21,9 @@ Pour cela, il faut paramétrer la liaison UART de la carte STM32-G431RB. Lors de
 Le principe est le suivant. On autorise les interruptions venant du UART. Une entrée à la console va faire appel à la fonction HAL_UART_RxCpltCallback() où on met un flag à 1. Puis on met le caractère recu dans une variable de type char et on réautorise les interruptions. 
 Pour pouvoir utiliser les commmandes directement dans le shell, on stocke chaque caractére recu dans un tableau de type char en incrément un compteur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help pinout...) on utilise la fonction strncmp(). 
 
+
+COMMANDE DE 4 TRANSISTOR DU HACHEUR:
+On génère 4 PWM en commande décalé. Pour cela, on utilise le Timer 1 sur les chaînes 1 et 2 en mode "PWM Generation CH1 CH1N". Afin d'avoir une fréquence de 16kHz pour faire tourner proprement la MCC, on prend PSC = 5-1 et ARR = 1024-1. Le mode de comptage est le "center aligend mode". On visualize les 4 signaux sur l'oscilloscope afin de vérifer le bon fonctionnement ainsi que la fréquence de nos signaux:
+
+
+
