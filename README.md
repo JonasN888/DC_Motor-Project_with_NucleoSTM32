@@ -59,3 +59,17 @@ La prochaine étape est de faire l'acquisition des données venant du capteur Ha
 
 Pour mesurer la vitessse du moteur, on peut utiliser l'encodeur déjà inclu dans la MCC. On configure le Timer2 en "counter mode" ce qui nous permet de compter de manière automatique l'evolution du moteur qui sera stocké dans le registre CNT du Timer2. 
 Afin de mesurer la vitesse, on peut activer un autre Timer qui va générer une interruption toutes les 1ms. Dans cette interruption (HAL_TIM_PeriodElapsedCallback) on vérifie d'abord si l'interruption vient du Timer correspondant. On peut ensuite calcuer l'écart entre la position actuelle et la position précédente, puis multiplier le résultat par la fréquence du Timer pour avoir la vitesse en tours par seconde. 
+
+
+Notre moteur a des caractéristiques particulières qu'il faut déterminer. On trouve les caractéristiques suivantes:
+R = 1,5 Ohm
+tau = 12,4ms
+L = 0,0186 H
+kphi = 0,132 Vs
+f=0,0011 Nms 
+Gamma_0 = 0,2506 Nm
+
+![IMG_20211130_095644](https://user-images.githubusercontent.com/95878275/145679855-ee7cc0e3-b5aa-4986-8a73-71359b0095f8.jpg)
+
+![IMG_20211130_103622](https://user-images.githubusercontent.com/95878275/145679870-0c087f3f-a28d-4fd8-ac21-ae342b701ca8.jpg)
+
