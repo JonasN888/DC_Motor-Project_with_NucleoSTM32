@@ -30,5 +30,9 @@ On génère 4 PWM en commande décalé. Pour cela, on utilise le Timer 1 sur les
 ![IMG_9188](https://user-images.githubusercontent.com/95878275/145674111-7a581ea2-4b7c-4aa9-9c5c-54700eaf9e32.PNG)
 
 
+Le câblage de la carte STM32 au hacheur se fait en utilisant la documentation "PowerModule_70097A.pdf".
+
+![IMG_20211116_105327](https://user-images.githubusercontent.com/95878275/145674224-aaccca4f-5367-4efa-bddf-2fe2d45ffd34.jpg)
 
 
+![IMG_20211109_092212](https://user-images.githubusercontent.com/95878275/145674236-b6eb5d1b-f74c-4702-8326-4da7fae88389.jpg)
