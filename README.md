@@ -19,4 +19,5 @@ CONSOLE UART:
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
 Pour cela, il faut paramétrer la liaison UART de la carte STM32-G431RB. Lors de l'envoie de donnée par l'interface UART, nous ne voyons pas ce que nous envoyons. C'est pourquoi il faut réaliser une fonction qui renvoie à l'utilisateur des caractéres un par un. 
 Le principe est le suivant. On autorise les interruptions venant du UART. Une entrée à la console va faire appel à la fonction HAL_UART_RxCpltCallback() où on met un flag à 1. Puis on met le caractère recu dans une variable de type char et on réautorise les interruptions. 
+Pour pouvoir utiliser les commmandes directement dans le shell, on stocke chaque caractére recu dans un tableau de type char en incrément un compteur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help pinout...) on utilise la fonction strncmp(). 
 
