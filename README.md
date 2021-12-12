@@ -55,11 +55,18 @@ Pour mesurer la vitessse du moteur, on peut utiliser l'encodeur déjà inclu dan
 Afin de mesurer la vitesse, on peut activer un autre Timer qui va générer une interruption toutes les 1ms. Dans cette interruption (HAL_TIM_PeriodElapsedCallback()) on vérifie d'abord si l'interruption vient du Timer correspondant. On peut ensuite calcuer l'écart entre la position actuelle et la position précédente, puis multiplier le résultat par la fréquence du Timer pour avoir la vitesse en tours par seconde. 
 
 
-Notre moteur a des caractéristiques particulières qu'il faut déterminer. 
+Notre moteur a des caractéristiques particulières qu'il faut déterminer.
+
+Voici les équations du moteur:
+
 (1) U = e + RI + L dI/dt
+
 (2) E = kphi*Omega
+
 (3) J dOmega/dt = Gamma_m - Gamma_0 - f*Omega
+
 (4) Gamma_m = kphi*I
+
 
 On trouve les caractéristiques suivantes: R = 1,5 Ohm (mesure à l'ohmmètre directement sur le moteur). On mesure ensuite Omega (constant et I pour diffférentes valeurs de U d'où on déduit e. Enfin on touve Kphi avec la formule e = kphi *Omega. On trace une droite en fonction de Omega et la pente est kphi. tau = 12,4ms , L = 0,0186 H , kphi = 0,132 Vs, f=0,0011 Nms et Gamma_0 = 0,2506 Nm.
 
