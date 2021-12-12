@@ -1,5 +1,5 @@
 # DC_Motor_Project_with_Nucleo_STM32
-Projet pour commander une MCC avec le Nucleo Board STM32
+Objectif: Commander une MCC avec le Nucleo Board STM32
 
 Le matériel utilisé dans ce projet est le "DC motor MP77S K16" de Drive Systems, le hacheur 4 quadrant "power module 70097A" ainsi qu'une carte Nucleo-G431RB STM32.
 
