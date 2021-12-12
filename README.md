@@ -71,7 +71,7 @@ Voici les équations du moteur:
 On trouve les caractéristiques suivantes:
 1. R (Mesuré à l'ohmmètre directement sur le moteur)
 
-2. Pour mesurer tau, on met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R avec l'équation (1). Un autre moyen est de bloquer le rotor (pour avoir e = 0) et de mesurer l'évolution du courant qui est de la forme i(t) = U*L/R*(1-exp(t/tau))
+2. Pour mesurer tau, on met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R avec l'équation (1). Un autre moyen est de bloquer le rotor (pour avoir e = 0) et de mesurer l'évolution du courant qui est de la forme i(t) = U*L/R*(1-exp(-t/tau))
 
 
 ![IMG_20211130_103622](https://user-images.githubusercontent.com/95878275/145679870-0c087f3f-a28d-4fd8-ac21-ae342b701ca8.jpg)
