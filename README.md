@@ -82,7 +82,7 @@ On trouve les caractéristiques suivantes:
 
 4. Ensuite on mesure I, d'où on calcule Gamma_m avec l'équation (3) 
 
-6. On mesure I pour différentes valeurs de Omega. On trace alors Gamma_m en fonction de Omega. Gamma_0 est l'absicce à l'ordonné à l'origine et f est la pente.  
+6. On mesure I pour différentes valeurs de Omega. Cela nous permet de connaître Cm et Omega. Omega est constant donc on obtient Gamma_m = Gamma_r + f*Omega avec l'équation (4). On trace alors Gamma_m en fonction de Omega. Gamma_r est l'absicce à l'ordonné à l'origine et f est la pente:  
 
 ![Unbenannt](https://user-images.githubusercontent.com/95878275/145706901-667833ef-b3e4-4c7e-a55b-52bca7731924.PNG)
 
