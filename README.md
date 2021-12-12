@@ -69,7 +69,7 @@ Voici les équations du moteur:
 
 
 On trouve les caractéristiques suivantes:
-1. R = 1,5 Ohm (mesure à l'ohmmètre directement sur le moteur). 
+1. Mesuré à l'ohmmètre directement sur le moteur 
 
 2. Pour le temps de montée pour mesurer tau. On met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R. 
 ![IMG_20211130_095644](https://user-images.githubusercontent.com/95878275/145679855-ee7cc0e3-b5aa-4986-8a73-71359b0095f8.jpg)
@@ -89,6 +89,7 @@ On trouve les caractéristiques suivantes:
 5. Il nous reste á déterminer J. On mesure la réponse aux bornes du moteur lorsqu'on débranche d'un coup l'alimentation donc I = 0. On mesure 104 ms de temps de descente pour passer de 5,76V à 0 Volts ce qui correspond à 37,67 rad/s en 104 ms.
 
 On trouve finalement:
+ R = 1,5 Ohms
 
  tau = 12,4ms 
  
