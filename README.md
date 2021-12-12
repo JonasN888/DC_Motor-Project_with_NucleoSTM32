@@ -56,7 +56,12 @@ Afin de mesurer la vitesse, on peut activer un autre Timer qui va générer une 
 
 
 Notre moteur a des caractéristiques particulières qu'il faut déterminer. 
-On trouve les caractéristiques suivantes: R = 1,5 Ohm (mesure à l'ohmmètre directement sur le moteur), tau = 12,4ms , L = 0,0186 H, kphi = 0,132 Vs, f=0,0011 Nms et Gamma_0 = 0,2506 Nm.
+(1) U = e + RI + L dI/dt
+(2) E = kphi*Omega
+(3) J dOmega/dt = Gamma_m - Gamma_0 - f*Omega
+(4) Gamma_m = kphi*I
+
+On trouve les caractéristiques suivantes: R = 1,5 Ohm (mesure à l'ohmmètre directement sur le moteur). On mesure ensuite Omega (constant et I pour diffférentes valeurs de U d'où on déduit e. Enfin on touve Kphi avec la formule e = kphi *Omega. On trace une droite en fonction de Omega et la pente est kphi. tau = 12,4ms , L = 0,0186 H , kphi = 0,132 Vs, f=0,0011 Nms et Gamma_0 = 0,2506 Nm.
 
 Ici, à titre d'exemple, pour le temps de montée pour mesurer tau. On met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R. 
 ![IMG_20211130_095644](https://user-images.githubusercontent.com/95878275/145679855-ee7cc0e3-b5aa-4986-8a73-71359b0095f8.jpg)
