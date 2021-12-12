@@ -23,7 +23,7 @@ Le principe est le suivant: On autorise les interruptions venant du UART. Une en
 Pour pouvoir utiliser des commmandes dans notre shell, on stocke chaque caractère reçu dans un tableau "cmd" de type char en incrémentant un pointeur après chaque nouveau caractère. Afin de comparer les chaînes de caractère aux commandes (start, speed, help, pinout...) on utilise la fonction strncmp(). L'appui sur la touche Entrée peut être détectée en utilisant le tableau d'ASCI en comparant notre caractère à 0x0D.
 
 
-COMMANDE DE 4 TRANSISTORs DU HACHEUR:
+COMMANDE DE 4 TRANSISTORS DU HACHEUR:
 
 On génère 4 PWM en commande décalé. Pour cela, on utilise le Timer 1 sur les chaînes 1 et 2 en mode "PWM Generation CH1 CH1N". Afin d'avoir une fréquence de 16kHz pour faire tourner proprement la MCC, on prend PSC = 5-1 et ARR = 1024-1. Le mode de comptage est le "center aligend mode". On visualise les 4 signaux sur l'oscilloscope afin de vérifer le bon fonctionnement ainsi que la fréquence de nos signaux:
 
