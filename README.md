@@ -63,7 +63,7 @@ Voici les équations du moteur:
 
 (2) E = kphi*Omega
 
-(3) J dOmega/dt = Gamma_m - Gamma_0 - f*Omega
+(3) J dOmega/dt = Gamma_m - Gamma_r - f*Omega
 
 (4) Gamma_m = kphi*I
 
@@ -98,5 +98,5 @@ On trouve finalement:
  
  f=0,0011 Nms 
  
- Gamma_0 = 0,2506 Nm.
+ Gamma_r = 0,2506 Nm.
 
