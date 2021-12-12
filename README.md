@@ -63,24 +63,26 @@ Voici les équations du moteur:
 
 (2) E = kphi*Omega
 
-(3) J dOmega/dt = Gamma_m - Gamma_r - f*Omega
+(3) Gamma_m = kphi*I
 
-(4) Gamma_m = kphi*I
+(4) J dOmega/dt = Gamma_m - Gamma_r - f*Omega
 
 
 On trouve les caractéristiques suivantes:
 1. Mesuré à l'ohmmètre directement sur le moteur 
 
-2. Pour le temps de montée pour mesurer tau. On met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R. 
+2. Pour le temps de montée pour mesurer tau. On met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R avec l'équation (1).
 
 
 ![IMG_20211130_103622](https://user-images.githubusercontent.com/95878275/145679870-0c087f3f-a28d-4fd8-ac21-ae342b701ca8.jpg)
 
 
 
-3. On mesure ensuite Omega et I pour diffférentes valeurs de U d'où on déduit e. Ensuite on touve Kphi avec la formule e = kphi *Omega. On trace une droite en fonction de Omega et la pente est kphi.
+3. On mesure ensuite Omega et I pour diffférentes valeurs de U d'où on déduit e avec l'équation (1). Ensuite on trouve Kphi avec l'équation (2). On trace une droite en fonction de Omega et la pente nous donne kphi.
 
-4. Ensuite pour différentes valeurs de Omega (constantm donc sa dérivée temporelle est nulle) on mesure I, d'où on calcule Gamma_m. On trace alors Gamma_m en fonction de Omeage. Gamma_0 est l'absicce à l'ordonné à l'origine et f est la pente.  
+4. Ensuite on mesure I, d'où on calcule Gamma_m avec l'équation (3) 
+
+6. On mesure I pour différentes valeurs de Omega. On trace alors Gamma_m en fonction de Omega. Gamma_0 est l'absicce à l'ordonné à l'origine et f est la pente.  
 
 ![Unbenannt](https://user-images.githubusercontent.com/95878275/145706901-667833ef-b3e4-4c7e-a55b-52bca7731924.PNG)
 
