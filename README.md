@@ -72,7 +72,6 @@ On trouve les caractéristiques suivantes:
 1. Mesuré à l'ohmmètre directement sur le moteur 
 
 2. Pour le temps de montée pour mesurer tau. On met en échelon de tension ( qui passe de 0 à 3 V) aux bornes du moteur tout en mesurant la réponse aux bornes du moteur, en bloquant l'affichage puis on peut remonter à tau avec L/R. 
-![IMG_20211130_095644](https://user-images.githubusercontent.com/95878275/145679855-ee7cc0e3-b5aa-4986-8a73-71359b0095f8.jpg)
 
 
 ![IMG_20211130_103622](https://user-images.githubusercontent.com/95878275/145679870-0c087f3f-a28d-4fd8-ac21-ae342b701ca8.jpg)
