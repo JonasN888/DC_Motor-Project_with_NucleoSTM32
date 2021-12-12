@@ -16,6 +16,7 @@ Il y a 4 étapes:
 
 
 
+
 CONSOLE UART:
 
 Via le port USB de la carte STM32G431, nous souhaitons avoir une interface permettant d'avoir des informations sur l'état du moteur et l'envoie de commandes. Pour cela, 
