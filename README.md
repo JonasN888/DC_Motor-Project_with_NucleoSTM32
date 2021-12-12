@@ -81,7 +81,10 @@ On trouve les caractéristiques suivantes:
 
 3. On mesure ensuite Omega et I pour diffférentes valeurs de U d'où on déduit e. Ensuite on touve Kphi avec la formule e = kphi *Omega. On trace une droite en fonction de Omega et la pente est kphi.
 
-4. Ensuite pour différentes valeurs de Omega (constantm donc sa dérivée temporelle est nulle) on mesure I, d'où on calcule Gamma_m. On trace alors GAmma_m en fonction de Omeage. GAmma_0 est l'absicce à l'ordonné à l'origine et f est la pente.  
+4. Ensuite pour différentes valeurs de Omega (constantm donc sa dérivée temporelle est nulle) on mesure I, d'où on calcule Gamma_m. On trace alors Gamma_m en fonction de Omeage. Gamma_0 est l'absicce à l'ordonné à l'origine et f est la pente.  
+
+![Unbenannt](https://user-images.githubusercontent.com/95878275/145706901-667833ef-b3e4-4c7e-a55b-52bca7731924.PNG)
+
 
 5. Il nous reste á déterminer J. On mesure la réponse aux bornes du moteur lorsqu'on débranche d'un coup l'alimentation donc I = 0. On mesure 104 ms de temps de descente pour passer de 5,76V à 0 Volts ce qui correspond à 37,67 rad/s en 104 ms.
 
